@@ -1,24 +1,25 @@
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 #include <iostream>
 
 
 
 int main( void )
 {
-	ClapTrap ct1;
-	ClapTrap ct2("ct2");
-	ClapTrap ct3(ct2);
-	ClapTrap ct4 = ct2;
+	ScavTrap st1;
+	ScavTrap st2("st2");
+	ScavTrap st3(st2);
+	ScavTrap st4 = st2;
 
-	ct1.setName("ct1");
-	ct3.setName("ct3");
-	ct4.setName("ct4");
+	st1.setName("st1");
+	st3.setName("st3");
+	st4.setName("st4");
 	
 	std::cout << std::endl;
 
-	ct1.attack("ct2");
-	ct2.takeDamage(ct1.getAttackDamage());
-	ct2.beRepaired(ct1.getAttackDamage());
+	st1.attack("st2");
+	st2.takeDamage(st1.getAttackDamage());
+	st2.beRepaired(st1.getAttackDamage());
+	st3.guardGate();
 
 	std::cout << std::endl;
 }

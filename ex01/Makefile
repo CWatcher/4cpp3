@@ -1,4 +1,5 @@
 SRC			=	ClapTrap.cpp	\
+			    ScavTrap.cpp	\
 				main.cpp
 OBJ			=	$(SRC:.cpp=.o)
 NAME		=	aa
