@@ -16,6 +16,8 @@ public:
 	void				setAttackDamage( int );
 	ClapTrap const & 	operator=( ClapTrap const & );
 	void				attack( std::string const & target );
+	void				takeDamage( unsigned int amount );
+	void				beRepaired( unsigned int amount );	
 private:
 	std::string	_name;
 	int			_hitPoints;
