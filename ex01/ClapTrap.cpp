@@ -5,10 +5,12 @@ ClapTrap::ClapTrap( std::string const & name):
 	_name( name ), _hitPoints( 10 ), _energyPoints( 10 ), _attackDamage( 0 )
 {	std::cout << "ClapTrap " << _name << " is constructed" << std::endl;
 }
-ClapTrap::ClapTrap( ClapTrap const & clapTrap )
-{
-	std::cout << "ClapTrap " << _name << " is constructed from " << clapTrap._name << std::endl;
-	*this = clapTrap;
+ClapTrap::ClapTrap( ClapTrap const & clapTrap ):
+	_name( clapTrap.getName() ),
+	_hitPoints( clapTrap.getHitPoints() ),
+	_energyPoints( clapTrap.getEnergyPoints() ),
+	_attackDamage( clapTrap.getAttackDamage() )
+{	std::cout << "ClapTrap " << _name << " is constructed from " << clapTrap._name << std::endl;
 }
 ClapTrap::~ClapTrap() {
 	std::cout << "ClapTrap " << _name << " is destructed" << std::endl;
