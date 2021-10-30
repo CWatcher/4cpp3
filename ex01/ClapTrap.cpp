@@ -13,6 +13,14 @@ ClapTrap::ClapTrap( ClapTrap const & clapTrap )
 ClapTrap::~ClapTrap() {
 	std::cout << "ClapTrap " << _name << " is destructed" << std::endl;
 }
+ClapTrap::ClapTrap( std::string const & name,
+                    int hitPoints, int energyPoints, int attackDamage ) :
+	_name( name ),
+	_hitPoints( hitPoints ),
+	_energyPoints( energyPoints ),
+	_attackDamage( attackDamage )
+{	std::cout << "ClapTrap " << _name << " is constructed" << std::endl;
+}
 std::string			ClapTrap::getName() const {
 	return _name;
 }

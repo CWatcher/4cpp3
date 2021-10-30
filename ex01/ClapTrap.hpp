@@ -25,4 +25,6 @@ protected:
 	int			_hitPoints;
 	int			_energyPoints;
 	int			_attackDamage;
+	ClapTrap( std::string const & name,
+	          int hitPoints, int energyPoints, int attackDamage );
 };
