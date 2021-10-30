@@ -16,6 +16,10 @@ int main( void )
 
 	st1.attack(st2.getName());
 	st2.takeDamage(st1.getAttackDamage());
+	st1.attack(st2.getName());
+	st2.takeDamage(st1.getAttackDamage());
+	st1.attack(st2.getName());
+	st2.takeDamage(st1.getAttackDamage());
 	st2.beRepaired(st1.getAttackDamage());
 	st3.guardGate();
 
