@@ -1,7 +1,11 @@
 #include "ClapTrap.hpp"
 #include <iostream>
 
-ClapTrap::ClapTrap( std::string const & name):
+ClapTrap::ClapTrap():
+	_name( "clapTrap" ), _hitPoints( 10 ), _energyPoints( 10 ), _attackDamage( 0 )
+{	std::cout << "ClapTrap " << _name << " is constructed by default" << std::endl;
+}
+ClapTrap::ClapTrap( std::string const & name ):
 	_name( name ), _hitPoints( 10 ), _energyPoints( 10 ), _attackDamage( 0 )
 {	std::cout << "ClapTrap " << _name << " is constructed" << std::endl;
 }
