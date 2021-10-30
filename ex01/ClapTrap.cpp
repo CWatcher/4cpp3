@@ -43,8 +43,8 @@ ClapTrap const & 	ClapTrap::operator=( ClapTrap const & clapTrap )
 	          << std::endl;
 	_name = clapTrap.getName();
 	_hitPoints = clapTrap.getHitPoints();
-	_hitPoints = clapTrap.getEnergyPoints();
-	_hitPoints = clapTrap.getAttackDamage();
+	_energyPoints = clapTrap.getEnergyPoints();
+	_attackDamage = clapTrap.getAttackDamage();
 	return *this;
 }
 void				ClapTrap::attack( std::string const & target )
