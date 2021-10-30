@@ -17,6 +17,7 @@ public:
 	void				setEnergyPoints( int );
 	void				setAttackDamage( int );
 	ClapTrap const & 	operator=( ClapTrap const & );
+						operator std::string() const;
 	void				attack( std::string const & target );
 	void				takeDamage( unsigned int amount );
 	void				beRepaired( unsigned int amount );	

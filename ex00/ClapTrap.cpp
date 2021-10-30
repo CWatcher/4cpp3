@@ -1,5 +1,6 @@
 #include "ClapTrap.hpp"
 #include <iostream>
+#include <sstream>
 
 ClapTrap::ClapTrap( std::string const & name):
 	_name( name ), _hitPoints( 10 ), _energyPoints( 10 ), _attackDamage( 0 )
@@ -56,6 +57,16 @@ ClapTrap const & 	ClapTrap::operator=( ClapTrap const & clapTrap )
 	_energyPoints = clapTrap.getEnergyPoints();
 	_attackDamage = clapTrap.getAttackDamage();
 	return *this;
+}
+					ClapTrap::operator std::string() const
+{
+	std::stringstream ss;
+
+	ss << "ClapTrap "      << _name         << ":"
+	   << " hitPoints "    << _hitPoints    << ", "
+	   << " energyPoints " << _energyPoints << ", "
+	   << " hitPoints "    << _attackDamage << std::endl;
+	return ss.str();
 }
 void				ClapTrap::attack( std::string const & target )
 {
