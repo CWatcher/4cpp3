@@ -6,6 +6,12 @@ ScavTrap::ScavTrap( std::string const & name):
 	ClapTrap( name, 100, 50, 20 ) {
 	std::cout << "ScavTrap " << _name << " is constructed" << std::endl;
 }
+ScavTrap::ScavTrap( ScavTrap const & ScavTrap )
+{
+	std::cout << "ScavTrap " << _name << " is constructed from "
+	          << ScavTrap._name << std::endl;
+	*this = ScavTrap;
+}
 ScavTrap::~ScavTrap() {
 	std::cout << "ScavTrap " << _name << " is destructed" << std::endl;
 }
