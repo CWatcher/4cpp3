@@ -48,7 +48,7 @@ int					ClapTrap::getEnergyPoints() const {
 int					ClapTrap::getAttackDamage() const {
 	return _attackDamage;
 }
-void				ClapTrap::setName( std::string name ) {
+void				ClapTrap::setName( std::string const & name ) {
 	_name = name;
 }
 void				ClapTrap::setHitPoints( int hitPoints ) {
