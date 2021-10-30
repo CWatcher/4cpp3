@@ -1,8 +1,6 @@
 #include "ScavTrap.hpp"
 #include <iostream>
 
-
-
 int main( void )
 {
 	ScavTrap st1;
@@ -16,7 +14,7 @@ int main( void )
 	
 	std::cout << std::endl;
 
-	st1.attack("st2");
+	st1.attack(st2.getName());
 	st2.takeDamage(st1.getAttackDamage());
 	st2.beRepaired(st1.getAttackDamage());
 	st3.guardGate();

@@ -14,7 +14,7 @@ int main( void )
 	
 	std::cout << std::endl;
 
-	ct1.attack("ct2");
+	ct1.attack(ct2.getName());
 	ct2.takeDamage(ct1.getAttackDamage());
 	ct2.beRepaired(ct1.getAttackDamage());
 
