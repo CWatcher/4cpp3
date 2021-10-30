@@ -60,7 +60,7 @@ ClapTrap const & 	ClapTrap::operator=( ClapTrap const & clapTrap )
 void				ClapTrap::attack( std::string const & target )
 {
 	if ( _energyPoints < _attackDamage ) {
-		std::cout << "ClapTrap " << _name << "failed to attack " << target
+		std::cout << "ClapTrap " << _name << " failed to attack " << target
 		          << " because he is tired"
 		          << std::endl;
 		return;
