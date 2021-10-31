@@ -3,7 +3,7 @@
 #include <iostream>
 
 FragTrap::FragTrap( std::string const & name):
-	ClapTrap( name, 100, 50, 20 )
+	ClapTrap( name, 100, 100, 30 )
 {	std::cout << "FragTrap " << _name << " is constructed" << std::endl;
 }
 FragTrap::FragTrap( FragTrap const & FragTrap )
@@ -28,7 +28,7 @@ void				FragTrap::attack( std::string const & target )
               << std::endl;
 	_energyPoints -= _attackDamage;
 }
-void				FragTrap::guardGate() {
-	std::cout << "FragTrap " << _name << " has enterred in Gate keeper mode "
+void				FragTrap::highFivesGuys() {
+	std::cout << "FragTrap " << _name << " requests positive high fives "
 	          << std::endl;
 }

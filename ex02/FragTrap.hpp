@@ -6,9 +6,9 @@
 class FragTrap: public ClapTrap
 {
 public:
-	FragTrap( std::string const & name = "FragTrap" );
+	FragTrap( std::string const & name = "fragTrap" );
 	FragTrap( FragTrap const & );
 	~FragTrap();
 	void				attack( std::string const & target );
-	void				guardGate();
+	void				highFivesGuys();
 };

@@ -29,7 +29,7 @@ int main( void )
 	attack(st1, st2);
 	attack(st1, st2);
 	st2.beRepaired(st1.getAttackDamage());
-	st3.guardGate();
+	st3.highFivesGuys();
 
 	std::cout << std::endl;
 }
