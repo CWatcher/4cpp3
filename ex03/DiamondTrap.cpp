@@ -7,19 +7,18 @@ DiamondTrap::DiamondTrap( std::string const & name)//:
 	std::cout << "DiamondTrap " << _name << " is constructed" << std::endl;
 }
 DiamondTrap::DiamondTrap( DiamondTrap const & diamondTrap ):
-FragTrap( diamondTrap )
-{
-	std::cout << "DiamondTrap is constructed from "
+	FragTrap( diamondTrap )
+{	std::cout << "DiamondTrap is constructed from "
 	          << diamondTrap._name << std::endl;
 	std::cout << *this << std::endl;
 }
-DiamondTrap::~DiamondTrap() {
-	std::cout << "DiamondTrap " << _name << " is destructed" << std::endl;
+DiamondTrap::~DiamondTrap()
+{	std::cout << "DiamondTrap " << _name << " is destructed" << std::endl;
 }
 void	DiamondTrap::attack( std::string const & target )
 {
-	if ( _energyPoints < _attackDamage ) {
-		std::cout << "DiamondTrap " << _name << " failed to attack " << target
+	if ( _energyPoints < _attackDamage )
+	{	std::cout << "DiamondTrap " << _name << " failed to attack " << target
 		          << " because he is tired" << std::endl;
 		return;
 	}
