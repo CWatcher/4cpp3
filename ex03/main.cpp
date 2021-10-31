@@ -1,7 +1,7 @@
-#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 #include <iostream>
 
-void attack(FragTrap &attacker, FragTrap &defender)
+void attack(DiamondTrap &attacker, DiamondTrap &defender)
 {
 	attacker.attack(defender.getName());
 	std::cout << attacker << std::endl;
@@ -11,25 +11,25 @@ void attack(FragTrap &attacker, FragTrap &defender)
 }
 int main( void )
 {
-	FragTrap st1;
+	DiamondTrap dt1;
 	std::cout << std::endl;
-	FragTrap st2("st2");
+	DiamondTrap dt2("dt2");
 	std::cout << std::endl;
-	FragTrap st3(st2);
+	DiamondTrap dt3(dt2);
 	std::cout << std::endl;
-	FragTrap st4 = st2;
+	DiamondTrap dt4 = dt2;
 
-	st1.setName("st1");
-	st3.setName("st3");
-	st4.setName("st4");
+	dt1.setName("dt1");
+	dt3.setName("dt3");
+	dt4.setName("dt4");
 	
 	std::cout << std::endl;
 
-	attack(st1, st2);
-	attack(st1, st2);
-	attack(st1, st2);
-	st2.beRepaired(st1.getAttackDamage());
-	st3.highFivesGuys();
+	attack(dt1, dt2);
+	attack(dt1, dt2);
+	attack(dt1, dt2);
+	dt2.beRepaired(dt1.getAttackDamage());
+	dt3.highFivesGuys();
 
 	std::cout << std::endl;
 }

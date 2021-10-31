@@ -1,14 +1,13 @@
 #pragma once
 
-#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 #include <string>
 
-class FragTrap: public ClapTrap
+class DiamondTrap: public FragTrap
 {
 public:
-	FragTrap( std::string const & name = "fragTrap" );
-	FragTrap( FragTrap const & );
-	~FragTrap();
+	DiamondTrap( std::string const & name = "diamondTrap" );
+	DiamondTrap( DiamondTrap const & );
+	~DiamondTrap();
 	void				attack( std::string const & target );
-	void				highFivesGuys();
 };

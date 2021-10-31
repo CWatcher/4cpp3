@@ -1,5 +1,6 @@
-SRC			= ClapTrap.cpp	\
-			  FragTrap.cpp	\
+SRC			= ClapTrap.cpp		\
+			  FragTrap.cpp		\
+			  DiamondTrap.cpp	\
 			  main.cpp
 OBJ			=	$(SRC:.cpp=.o)
 NAME		=	aa
