@@ -1,4 +1,3 @@
-#include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include <iostream>
 
@@ -8,9 +7,10 @@ ScavTrap::ScavTrap( std::string const & name):
 }
 ScavTrap::ScavTrap( ScavTrap const & ScavTrap )
 {
-	std::cout << "ScavTrap " << _name << " is constructed from "
+	std::cout << "ScavTrap is being constructed from "
 	          << ScavTrap._name << std::endl;
 	*this = ScavTrap;
+	std::cout << *this << std::endl;
 }
 ScavTrap::~ScavTrap() {
 	std::cout << "ScavTrap " << _name << " is destructed" << std::endl;

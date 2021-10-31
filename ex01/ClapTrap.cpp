@@ -1,20 +1,27 @@
 #include "ClapTrap.hpp"
 #include <iostream>
+#include <sstream>
 
 ClapTrap::ClapTrap():
 	_name( "clapTrap" ), _hitPoints( 10 ), _energyPoints( 10 ), _attackDamage( 0 )
-{	std::cout << "ClapTrap " << _name << " is constructed by default" << std::endl;
+{
+	std::cout << "ClapTrap is constructed by default" << std::endl;
+	std::cout << *this << std::endl;
 }
 ClapTrap::ClapTrap( std::string const & name ):
 	_name( name ), _hitPoints( 10 ), _energyPoints( 10 ), _attackDamage( 0 )
-{	std::cout << "ClapTrap " << _name << " is constructed" << std::endl;
+{
+	std::cout << "ClapTrap is constructed by name" << std::endl;
+	std::cout << *this << std::endl;
 }
 ClapTrap::ClapTrap( ClapTrap const & clapTrap ):
 	_name( clapTrap.getName() ),
 	_hitPoints( clapTrap.getHitPoints() ),
 	_energyPoints( clapTrap.getEnergyPoints() ),
 	_attackDamage( clapTrap.getAttackDamage() )
-{	std::cout << "ClapTrap " << _name << " is constructed from " << clapTrap._name << std::endl;
+{
+	std::cout << "ClapTrap is constructed from " << clapTrap._name << std::endl;
+	std::cout << *this << std::endl;
 }
 ClapTrap::~ClapTrap() {
 	std::cout << "ClapTrap " << _name << " is destructed" << std::endl;
@@ -25,7 +32,9 @@ ClapTrap::ClapTrap( std::string const & name,
 	_hitPoints( hitPoints ),
 	_energyPoints( energyPoints ),
 	_attackDamage( attackDamage )
-{	std::cout << "ClapTrap " << _name << " is constructed" << std::endl;
+{
+	std::cout << "ClapTrap is constructed" << std::endl;
+	std::cout << *this << std::endl;
 }
 std::string			ClapTrap::getName() const {
 	return _name;
@@ -61,6 +70,16 @@ ClapTrap const & 	ClapTrap::operator=( ClapTrap const & clapTrap )
 	_attackDamage = clapTrap.getAttackDamage();
 	return *this;
 }
+					ClapTrap::operator std::string() const
+{
+	std::stringstream ss;
+
+	ss << "ClapTrap "      << _name         << ":"
+	   << " hitPoints "    << _hitPoints    << ", "
+	   << " energyPoints " << _energyPoints << ", "
+	   << " hitPoints "    << _attackDamage;
+	return ss.str();
+}
 void				ClapTrap::attack( std::string const & target )
 {
 	if ( _energyPoints < _attackDamage ) {
@@ -86,4 +105,8 @@ void				ClapTrap::beRepaired( unsigned int amount )
 	std::cout << "ClapTrap " << _name << " is repaired by " << amount
 	          << " hit points"
 	          << std::endl;
+}
+
+std::ostream &operator<<(std::ostream &os, ClapTrap const &clapTrap) {
+	return os << (std::string)clapTrap;
 }

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <ostream>
 
 class ClapTrap
 {
@@ -27,3 +28,5 @@ private:
 	int			_energyPoints;
 	int			_attackDamage;
 };
+
+std::ostream&	operator<<( std::ostream &, ClapTrap const & );

@@ -4,8 +4,11 @@
 int main( void )
 {
 	ClapTrap ct1;
+	std::cout << std::endl;
 	ClapTrap ct2("ct2");
+	std::cout << std::endl;
 	ClapTrap ct3(ct2);
+	std::cout << std::endl;
 	ClapTrap ct4 = ct2;
 
 	ct1.setName("ct1");
