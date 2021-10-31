@@ -1,7 +1,7 @@
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 #include <iostream>
 
-void attack(ScavTrap &attacker, ScavTrap &defender)
+void attack(FragTrap &attacker, FragTrap &defender)
 {
 	attacker.attack(defender.getName());
 	std::cout << attacker << std::endl;
@@ -11,13 +11,13 @@ void attack(ScavTrap &attacker, ScavTrap &defender)
 }
 int main( void )
 {
-	ScavTrap st1;
+	FragTrap st1;
 	std::cout << std::endl;
-	ScavTrap st2("st2");
+	FragTrap st2("st2");
 	std::cout << std::endl;
-	ScavTrap st3(st2);
+	FragTrap st3(st2);
 	std::cout << std::endl;
-	ScavTrap st4 = st2;
+	FragTrap st4 = st2;
 
 	st1.setName("st1");
 	st3.setName("st3");

@@ -3,12 +3,12 @@
 #include "ClapTrap.hpp"
 #include <string>
 
-class ScavTrap: public ClapTrap
+class FragTrap: public ClapTrap
 {
 public:
-	ScavTrap( std::string const & name = "scavTrap" );
-	ScavTrap( ScavTrap const & );
-	~ScavTrap();
+	FragTrap( std::string const & name = "FragTrap" );
+	FragTrap( FragTrap const & );
+	~FragTrap();
 	void				attack( std::string const & target );
 	void				guardGate();
 };
