@@ -1,4 +1,3 @@
-#include "ClapTrap.hpp"
 #include "FragTrap.hpp"
 #include <iostream>
 
@@ -6,13 +5,13 @@ FragTrap::FragTrap( std::string const & name):
 	ClapTrap( name, 100, 100, 30 )
 {	std::cout << "FragTrap " << _name << " is constructed" << std::endl;
 }
-FragTrap::FragTrap( FragTrap const & FragTrap )
+FragTrap::FragTrap( FragTrap const & fragTrap ):
+ClapTrap( fragTrap )
 {
-	std::cout << "FragTrap is being constructed from "
-	          << FragTrap._name << std::endl;
-	*this = FragTrap;
+	std::cout << "FragTrap is constructed from "
+	          << fragTrap._name << std::endl;
 	std::cout << *this << std::endl;
-	}
+}
 FragTrap::~FragTrap() {
 	std::cout << "FragTrap " << _name << " is destructed" << std::endl;
 }
