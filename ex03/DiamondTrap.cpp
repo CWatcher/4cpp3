@@ -1,10 +1,13 @@
 #include "DiamondTrap.hpp"
 #include <iostream>
 
-DiamondTrap::DiamondTrap( std::string const & name)//:
-//	ClapTrap( name, 100, 50, 20 )
-{	_name = name;
+DiamondTrap::DiamondTrap( std::string const & name):
+	ClapTrap( name + "_clap_name" )
+{
+	_name = name;
+	_hitPoints = FragTrap::_hitPoints;
 	std::cout << "DiamondTrap " << _name << " is constructed" << std::endl;
+	std::cout << *this << std::endl;
 }
 DiamondTrap::DiamondTrap( DiamondTrap const & diamondTrap ):
 	FragTrap( diamondTrap )

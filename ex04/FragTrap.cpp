@@ -1,12 +1,9 @@
 #include "FragTrap.hpp"
 #include <iostream>
 
-FragTrap::FragTrap( std::string const & name)//:
-//	ClapTrap( name, 100, 100, 30 )
-{
-	_name = name;
-	_hitPoints = 100;
-	std::cout << "FragTrap " << _name << " is constructed" << std::endl;
+FragTrap::FragTrap( std::string const & name):
+	ClapTrap( name, 100, 100, 30 )
+{	std::cout << "FragTrap " << _name << " is constructed" << std::endl;
 }
 FragTrap::FragTrap( FragTrap const & fragTrap ):
 ClapTrap( fragTrap )
